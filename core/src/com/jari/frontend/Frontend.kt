@@ -57,7 +57,6 @@ class Frontend : Screen {
     private val dependencies: FysList<Pair<DirectoryWidget, TextField>> = FysList()
 
     init {
-//        val clickColor = Color(selectionColor.r, selectionColor.g, selectionColor.b, 0.7f)
         val clickColor = Color(0.4f, 0.4f, 1f, 0.6f)
 
         val generator = FreeTypeFontGenerator(Gdx.files.internal("ArialMonoMTProRegular.TTF"))

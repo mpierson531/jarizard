@@ -17,7 +17,8 @@ buildscript {
 allprojects {
     apply plugin: "eclipse"
 
-    version = '1.0'
+    version = '1.1'
+
     ext {
         appName = "Jarizard"
         gdxVersion = '1.11.0'
@@ -26,6 +27,8 @@ allprojects {
         ashleyVersion = '1.7.4'
         aiVersion = '1.8.2'
         gdxControllersVersion = '2.2.1'
+
+        backendVersion = 2.0
     }
 
     repositories {
@@ -50,17 +53,23 @@ project(":desktop") {
         api "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
         api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     }
+
+    jar {
+        archiveBaseName = "Jarizard GUI${project.version}"
+    }
 }
 
 project(":core") {
     apply plugin: "kotlin"
 
-
     dependencies {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
         api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
         implementation files("C:\\Users\\Micah\\OneDrive\\Documents\\libgdx projects\\Geo-Engine\\jar-dir\\geo-engine.jar")
-        implementation files("C:\\Users\\Micah\\OneDrive\\Documents\\libgdx projects\\jarizard-backend\\core\\build\\libs\\jarizard-backend-1.0.jar")
+
+        implementation files("C:\\Users\\Micah\\OneDrive\\Documents\\libgdx projects\\" +
+                "jarizard-backend\\jar-dir\\jarizard-backend-${project.ext.backendVersion}.jar")
     }
 }
