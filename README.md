@@ -5,4 +5,4 @@ This is just the GUI, with it's backend being: https://github.com/mpierson531/ja
 
 Note: if an input is a folder, then that folder will be included in the structure of the resulting jar.
 
-Download link for jar: https://ln5.sync.com/dl/d676e2850/9ypnafp2-tip859ps-vkd7k7z7-u9289uce
+Download link for jar: https://ln5.sync.com/dl/b334137c0/fexzfcwu-urxadctu-mwxkg5fm-u8txarkj
